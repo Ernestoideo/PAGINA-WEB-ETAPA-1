@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arquitectura Cliente/Servidor • DCU • Investigación de requisitos</title>
+  <meta name="description" content="Página informativa sobre arquitectura Cliente/Servidor, diseño centrado en el usuario (DCU) e investigación en el territorio para análisis de requisitos." />
+  <!-- VINCULACION CON EL ARCHIVO CCS -->
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+ <!-- CODIGO DE TARJETAS PARA VINCULAR CON CADA SECCION -->
+  <header class="site-header">
+    <div class="wrap hero">
+      <h1>Desarrollo de Aplicaciones para la Web</h1>
+      <p class="subtitle">Arquitectura Cliente/Servidor • Diseño Centrado en el Usuario • Investigación en el Territorio</p>
+      <div class="chip-row">
+        <span class="chip">Estudiante: <strong>JOSE MANUEL GARZON DURAN</strong></span>
+        <span class="chip">Grupo: <strong>202047916_18</strong></span>
+        <span class="chip">Tutor: <strong>JORGE LEONARDO RAMIREZ RESTREPO</strong></span>
+        <span class="chip">Ciudad: <strong>NEIVA</strong></span>
+        <span class="chip">Año: <strong>2025</strong></span>
+      </div>
+      <nav class="main-nav">
+        <a href="#cliente-servidor">Cliente/Servidor</a>
+        <a href="#dcu">Diseño Centrado en el Usuario</a>
+        <a href="#investigacion">Investigación en el territorio</a>
+        <a href="#requisitos">Análisis de requisitos</a>
+        <a href="#referencias">Referencias (APA 7)</a>
+        <button id="themeToggle" aria-label="Cambiar tema">🌗</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    
+    <!-- CLIENTE SERVIDOR -->
+    <section id="cliente-servidor" class="card">
+      <h2>Arquitectura Cliente/Servidor</h2>
+      <p>
+        La arquitectura cliente/servidor organiza una aplicación en dos partes diferentes. El <em>cliente</em> provee la datos, la interfaz, captura entradas
+        y presenta resultados mientras el <em>servidor</em> gestiona la lógica de la aplicación, el acceso a datos y las respuestas a las solicitudes.
+        Esta separación facilita la escalabilidad, el mantenimiento y la seguridad en aplicaciones.
+      </p>
+      <div class="diagram">
+        <!-- Diagrama simple SVG: Cliente ⇄ Servidor ⇄ Base de datos -->
+        <svg viewBox="0 0 760 200" role="img" aria-label="Diagrama Cliente Servidor">
+          <defs>
+            <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+              <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.25"/>
+            </filter>
+          </defs>
+          <rect x="40" y="60" width="180" height="80" rx="14" class="svg-box"/>
+          <text x="130" y="105" text-anchor="middle" class="svg-label">Cliente</text>
+
+          <rect x="290" y="40" width="180" height="120" rx="14" class="svg-box"/>
+          <text x="380" y="90" text-anchor="middle" class="svg-label">Servidor</text>
+          <text x="380" y="115" text-anchor="middle" class="svg-sub">API • Lógica • Seguridad</text>
+
+          <rect x="540" y="60" width="180" height="80" rx="14" class="svg-box"/>
+          <text x="630" y="95" text-anchor="middle" class="svg-label">Base de datos</text>
+
+          <g class="svg-arrows">
+            <path d="M220 100 L290 100" />
+            <path d="M470 100 L540 100" />
+            <polygon points="285,100 275,95 275,105"/>
+            <polygon points="535,100 525,95 525,105"/>
+          </g>
+        </svg>
+      </div>
+      
+      <p class="ref-note">Sustenta con: Infranetworking (2019); Reactive Programming (2021); Luján (2002).</p>
+    </section>
+
+    <!-- DISEÑO CENTRADO EN EL USUARIO -->
+    <section id="dcu" class="card">
+      <h2>Diseño centrado en el usuario (DCU)</h2>
+      <p>
+        El DCU es un enfoque que sitúa a las personas en el centro del proceso de diseño. Implica comprender necesidades, contexto y
+        expectativas, crear soluciones creativas y evaluar su usabilidad con usuarios reales. En desarrollo web esto se puede evidenciar en interfaces
+        claras, accesibles y eficientes.
+      </p>
+      <div class="grid-3">
+        <div class="pill">
+          <h3>1. Comprender</h3>
+          <p>Entrevistas, observación contextual, análisis de tareas y <em>personas</em> para entender metas y limitaciones.</p>
+        </div>
+        <div class="pill">
+          <h3>2. Diseñar</h3>
+          <p>Bocetos, wireframes y prototipos que materializan hipótesis de solución listas para validación temprana.</p>
+        </div>
+        <div class="pill">
+          <h3>3. Evaluar</h3>
+          <p>Pruebas con usuarios, métricas de usabilidad y mejoras incrementales antes del desarrollo completo.</p>
+        </div>
+      </div>
+      <p class="ref-note">Sustenta con: Granollers (2012), cap. 2–3.</p>
+    </section>
+
+   <!-- INVESTIGACION EN EL TERRITORIO -->
+   <!-- LA PRIMERA PARTE SIEMPRE ES PARA VINCULAR CON LA TARJETA DEL PRINCPIO -->
+    <section id="investigacion" class="card">
+      <h2>Importancia de la investigación en el territorio</h2>
+      <p>
+        Investigar en el territorio permite levantar requisitos reales y verificar supuestos con las personas y organizaciones que usarán
+        la aplicación. Conecta las decisiones técnicas con necesidades sociales y necesidades reales, reduciendo el trabajo y aumentando
+        la productividad.
+      </p>
+      <ul class="checklist">
+        <li><strong>Entrevistas y encuestas:</strong> expectativas, problemas y criterios de éxito.</li>
+        <li><strong>Observación en contexto:</strong> flujos reales, brechas digitales, limitaciones de conectividad.</li>
+        <li><strong>Co-creación:</strong> talleres breves para priorizar funcionalidades y validarlas.</li>
+      </ul>
+      <aside class="note">
+        <strong>Pro tip:</strong> traduce hallazgos en historias de usuario: “Como <em>rol</em>, quiero <em>meta</em> para <em>beneficio</em>”.
+      </aside>
+      <p class="ref-note">Sustenta con: contenidos de la guía y bibliografía RAC.</p>
+    </section>
+
+    <!-- ANALISIS DE REQUISITOS  -->
+    <section id="requisitos" class="card">
+      <h2>Análisis de requisitos</h2>
+      <p>Los requisitos de un proyecto se dividen en dos, Funcionales y No funcionales, son necesario para hacer una buena investigacion en el territorio.</p>
+      <div class="reqs">
+        <div>
+          <h3>Funcionales</h3>
+          <ul>
+            <li>Definen acciones concretas.</li>
+            <li>Responden al “qué hace”.</li>
+            <li>Son verificables.</li>
+            <li>Se enfocan en el comportamiento del sistema.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>No funcionales</h3>
+          <ul>
+            <li>Definen atributos de calidad. </li>
+            <li>Responden al “cómo lo hace”. </li>
+            <li>Son medibles mediante parámetros. </li>
+            <li>fectan la experiencia del usuario y el entorno.</li>
+          </ul>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- BIBLIOGRAFIA -->
+    <section id="referencias" class="card">
+      <h2>Referencias (APA 7ª edición)</h2>
+      <ol class="refs">
+        <li>Blog Infranetworking. (2019). <em>Modelo cliente-servidor</em>. https://blog.infranetworking.com/modelo-cliente-servidor/</li>
+        <li>Reactive Programming. (2021). <em>La arquitectura cliente-servidor</em>. https://reactiveprogramming.io/blog/es/estilos-arquitectonicos/cliente-servidor</li>
+        <li>Granollers, T. (2012). <em>Diseño de sistemas interactivos centrados en el usuario</em> (pp. 23–49). Editorial UOC.</li>
+        <li>Luján, S. (2002). <em>Programación de aplicaciones web: historia, principios básicos y clientes web</em> (pp. 39–89). Universidad de Alicante. https://rua.ua.es/dspace/bitstream/10045/16995/1/sergio_lujan-programacion_de_aplicaciones_web.pdf</li>
+      </ol>
+      <p class="small">Fuentes Bibliograficas</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Curso: Desarrollo de Aplicaciones para la Web • Grupo 202047916_18</p>
+      <p class="small">TECNOLOGIA EN DESARROLLO DE SOFTWARE</p>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" aria-label="Volver arriba">↑</button>
+  <!-- VINCULACION CON EL ARCHIVO DE JAVA SCRITP -->
+  <script src="js/script.js"></script>
+</body>
+</html>
